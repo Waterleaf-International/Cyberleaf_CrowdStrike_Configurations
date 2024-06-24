@@ -1,0 +1,29 @@
+# This is an exported workflow. Editing this file is not recommended.
+
+name: Call Webhook on Host Change
+trigger:
+    next:
+        - call_webhook_cbd021cc
+    event: HostState
+actions:
+    call_webhook_cbd021cc:
+        id: 450fa6add611335063035c5cf0bb87eb
+        properties:
+            _fields:
+                - ${Trigger.Category.HostState.Device.Hostname}
+                - ${Trigger.Category.HostState.Device.Platform}
+                - ${Trigger.Category.HostState.Device.SensorID}
+                - ${Trigger.Category.HostState.Device.Groups}
+                - ${Trigger.Category.HostState.Device.Tags}
+                - ${Trigger.Category.HostState.MainState}
+                - ${Trigger.Category.HostState.Device.SensorVersion}
+                - ${Trigger.CID}
+                - ${Trigger.ID}
+                - ${Trigger.Name}
+                - ${Trigger.ObservedTime}
+                - ${Trigger.Category}
+                - ${Trigger.SourceEventURL}
+                - ${Trigger.SourceEventID}
+                - ${Workflow.Definition.Name}
+            config_id: 4e0dede294024ce29863f742f33cfcf2
+            datatype: default_data

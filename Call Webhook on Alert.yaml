@@ -1,0 +1,31 @@
+# This is an exported workflow. Editing this file is not recommended.
+
+name: Call Webhook on Alert
+trigger:
+    next:
+        - call_webhook_ccfd4db0
+    event: Investigatable
+actions:
+    call_webhook_ccfd4db0:
+        id: 450fa6add611335063035c5cf0bb87eb
+        properties:
+            _fields:
+                - ${Trigger.Category.Investigatable.TacticNames}
+                - ${Trigger.Category.Investigatable.Tags}
+                - ${Trigger.Category.Investigatable.TechniqueNames}
+                - ${Trigger.Name}
+                - ${Workflow.Execution.Time}
+                - ${Trigger.Category.Investigatable.InvestigatableID}
+                - ${Trigger.Category.Investigatable.Description}
+                - ${Trigger.Category.Investigatable.Name}
+                - ${Trigger.Category.Investigatable.Product}
+                - ${Trigger.Category.Investigatable.Severity}
+                - ${Trigger.CID}
+                - ${Trigger.Category}
+                - ${Trigger.ObservedTime}
+                - ${Trigger.SourceEventURL}
+                - ${Trigger.ID}
+                - ${Trigger.SourceEventID}
+                - ${Workflow.Definition.Name}
+            config_id: 4e0dede294024ce29863f742f33cfcf2
+            datatype: default_data

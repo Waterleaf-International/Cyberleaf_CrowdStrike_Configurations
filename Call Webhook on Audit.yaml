@@ -1,0 +1,23 @@
+# This is an exported workflow. Editing this file is not recommended.
+
+name: Call Webhook on Audit
+trigger:
+    next:
+        - call_webhook_ccfd4db0
+    event: FalconAudit
+actions:
+    call_webhook_ccfd4db0:
+        id: 450fa6add611335063035c5cf0bb87eb
+        properties:
+            _fields:
+                - ${Trigger.Category.FalconAudit.Target}
+                - ${Trigger.Category.FalconAudit.Source}
+                - ${Trigger.CID}
+                - ${Trigger.ObservedTime}
+                - ${Trigger.ID}
+                - ${Trigger.Name}
+                - ${Workflow.Definition.Name}
+                - ${Trigger.SourceEventURL}
+                - ${Trigger.SourceEventID}
+            config_id: 4e0dede294024ce29863f742f33cfcf2
+            datatype: default_data

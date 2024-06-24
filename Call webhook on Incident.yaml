@@ -1,0 +1,78 @@
+# This is an exported workflow. Editing this file is not recommended.
+
+name: Call webhook on Incident
+trigger:
+    next:
+        - call_webhook_581a7716
+    event: Incident
+actions:
+    call_webhook_581a7716:
+        id: 450fa6add611335063035c5cf0bb87eb
+        properties:
+            _fields:
+                - ${Trigger.Category.Incident.Sensor.BiosManufacturer}
+                - ${Trigger.Category.Incident.Sensor.BiosVersion}
+                - ${Trigger.Category.Incident.Sensor.CloudInstanceID}
+                - ${Trigger.Category.Incident.Sensor.CloudServiceProvider}
+                - ${Trigger.Category.Incident.Sensor.CloudServiceProviderAccountID}
+                - ${Trigger.Category.Incident.EndTime}
+                - ${Trigger.Category.Incident.EndTime.Date}
+                - ${Trigger.Category.Incident.EndTime.DayOfWeek}
+                - ${Trigger.Category.Incident.EndTime.Hour}
+                - ${Trigger.Category.Incident.EndTime.Minute}
+                - ${Trigger.Category.Incident.EndTime.Timezone}
+                - ${Trigger.Category.Incident.Sensor.ExternalIP}
+                - ${Trigger.Category.Incident.Sensor.ExternalIPv6}
+                - ${Trigger.Category.Incident.Sensor.SensorID}
+                - ${Trigger.Category.Incident.Sensor.GroupNames}
+                - ${Trigger.Category.Incident.Sensor.Groups}
+                - ${Trigger.Category.Incident.Sensor.Tags}
+                - ${Trigger.Category.Incident.Sensor.ProductType}
+                - ${Trigger.Category.Incident.IncidentID}
+                - ${Trigger.Category.Incident.URL}
+                - ${Trigger.Category.Incident.Description}
+                - ${Trigger.Category.Incident.Name}
+                - ${Trigger.Category.Incident.IncidentScore}
+                - ${Trigger.Category.Incident.Severity}
+                - ${Trigger.Category.Incident.State}
+                - ${Trigger.Category.Incident.Status}
+                - ${Trigger.Category.Incident.IncidentType}
+                - ${Trigger.Category.Incident.LastUpdate}
+                - ${Trigger.Category.Incident.LastUpdate.Date}
+                - ${Trigger.Category.Incident.LastUpdate.DayOfWeek}
+                - ${Trigger.Category.Incident.LastUpdate.Hour}
+                - ${Trigger.Category.Incident.LastUpdate.Minute}
+                - ${Trigger.Category.Incident.LastUpdate.Timezone}
+                - ${Trigger.Category.Incident.LateralMovement}
+                - ${Trigger.Category.Incident.Sensor.LocalIP}
+                - ${Trigger.Category.Incident.Sensor.LocalIPv6}
+                - ${Trigger.Category.Incident.Sensor.MacAddress}
+                - ${Trigger.Category.Incident.Sensor.OSVersion}
+                - ${Trigger.Category.Incident.Sensor.OU}
+                - ${Trigger.Category.Incident.Objectives}
+                - ${Trigger.Category.Incident.Sensor.Domain}
+                - ${Trigger.Category.Incident.Sensor.Hostname}
+                - ${Trigger.Category.Incident.Sensor.Platform}
+                - ${Trigger.Category.Incident.Sensor.SensorVersion}
+                - ${Trigger.Category.Incident.Sensor.SiteName}
+                - ${Trigger.Category.Incident.StartTime}
+                - ${Trigger.Category.Incident.StartTime.Date}
+                - ${Trigger.Category.Incident.StartTime.DayOfWeek}
+                - ${Trigger.Category.Incident.StartTime.Hour}
+                - ${Trigger.Category.Incident.StartTime.Minute}
+                - ${Trigger.Category.Incident.StartTime.Timezone}
+                - ${Trigger.Category.Incident.Sensor.SystemManufacturer}
+                - ${Trigger.Category.Incident.Sensor.SystemProductName}
+                - ${Trigger.Category.Incident.Tactics}
+                - ${Trigger.Category.Incident.Tags}
+                - ${Trigger.Category.Incident.Techniques}
+                - ${Trigger.Category.Incident.Updated}
+                - ${Trigger.Category}
+                - ${Trigger.CID}
+                - ${Trigger.ObservedTime}
+                - ${Workflow.Definition.Name}
+                - ${Trigger.SourceEventURL}
+                - ${Trigger.ID}
+                - ${Trigger.Name}
+            config_id: 4e0dede294024ce29863f742f33cfcf2
+            datatype: default_data
